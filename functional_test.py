@@ -31,11 +31,10 @@ class NewVisitorTest(unittest.TestCase):
         # Then she clicks to register for the workshop.
         self.browser.find_element_by_id('register').click()
 
-
         # She notices a new form requesting her name, email.
         # She enters her name and email, and submits.
-        register_form = self.browser.find_element_by_id('\
-                register-form')
+        register_form = self.browser.find_element_by_id\
+                ('register-form')
         register_form.find_element_by_name('username').\
                 sendkeys('shruti')
         register_form.find_element_by_name('email').\
@@ -53,12 +52,12 @@ class NewVisitorTest(unittest.TestCase):
         ## Remainder.
         self.fail('Complete Test')
 
-    def test_admin_can_view_registered_users(self):
+    #def test_admin_can_view_registered_users(self):
 
-        # Admin(rajesh) receives an email saying that a user registered 
+        # Admin(rajesh) receives an email saying that a user(shruti) registered
         # for email
 
-        # Admin(rajesh) is happy that users are showing interested and he 
+        # Admin(rajesh) is happy that users are showing interested and he
         # wants who are the registered users.
 
         # He visits the admin page and logins.
@@ -71,7 +70,7 @@ class NewVisitorTest(unittest.TestCase):
         # registered.
 
         # He selects those spam entries and clicks 'deregister' button on top
-        pass
+        # pass
 
 if __name__ == '__main__':
     unittest.main(warnings='ignore')
